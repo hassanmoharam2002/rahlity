@@ -1,0 +1,66 @@
+
+
+import 'package:flutter/material.dart';
+
+class CustomTextform extends StatelessWidget {
+  BorderRadius?  bordr;
+   VoidCallback suffixpressed;
+   IconData? sufix;
+  final bool statepassword;
+  final String hintext;
+  final TextEditingController mycontroller;
+  final String? Function(String?)? validator;
+   final IconData? prefix;
+
+    CustomTextform({super.key,
+    required this.hintext,
+    required this.mycontroller,
+    required this.validator, required this.statepassword, required this.prefix,
+       required this.suffixpressed, this.sufix,
+      this.bordr
+  });
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+
+      obscureText: statepassword,
+      validator: validator,
+      controller: mycontroller,
+      decoration: InputDecoration(
+        suffixIcon:sufix != null
+            ? IconButton(onPressed: suffixpressed, icon: Icon(sufix))
+            : sufix = null,
+        prefixIcon: Icon(prefix),
+        constraints:  const BoxConstraints(),
+        hintText:hintext ,
+        hintStyle: const TextStyle(
+            fontSize: 14, color: Colors.grey
+        ),
+        contentPadding:EdgeInsets.symmetric(vertical:2 ,
+            horizontal: 10) ,
+        filled: true,
+        fillColor: Colors.grey[200],
+        border: OutlineInputBorder(
+            borderRadius: bordr!,
+            borderSide: BorderSide(color: Colors.grey)
+        ),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: bordr!,
+            borderSide: BorderSide(color: Colors.grey)
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: bordr!,
+          borderSide: BorderSide(
+            color: Colors.orange,
+          ),
+        ),
+
+
+      ),
+
+    );
+  }
+}
