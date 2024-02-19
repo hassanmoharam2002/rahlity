@@ -54,7 +54,8 @@ class CustomTextform extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderRadius: bordr!,
           borderSide: BorderSide(
-            color: Colors.orange,
+            width: 1.7,
+            color: Color(0xFF212121),
           ),
         ),
 

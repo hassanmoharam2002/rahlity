@@ -12,6 +12,8 @@ class Akama extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+      ),
       body: ListView(
         padding: EdgeInsets.all(10),
         children: [
@@ -22,12 +24,38 @@ class Akama extends StatelessWidget {
 
             height: 200,
             decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(20),
+              color: Colors.white70,
+              borderRadius: BorderRadius.circular(10),
             ),
 
             child: Column(
               children: [
+                SizedBox(
+                  height: 10,
+                ),
+                CustomTextform(
+                  bordr:BorderRadius.circular(10) ,
+                  hintext: 'search',
+                  mycontroller: search,
+                  validator: null,
+                  statepassword: false,
+                  prefix: Icons.search,
+                  suffixpressed: () {  },
+
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                CustomTextform(
+                  bordr:BorderRadius.circular(10) ,
+                  hintext: 'search',
+                  mycontroller: search,
+                  validator: null,
+                  statepassword: false,
+                  prefix: Icons.search,
+                  suffixpressed: () {  },
+
+                ),
                 SizedBox(
                   height: 10,
                 ),

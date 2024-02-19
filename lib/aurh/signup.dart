@@ -62,7 +62,8 @@ class _SignUpState extends State<SignUp> {
                         fontWeight: FontWeight.bold
                     ),
                   ),
-                  CustomTextform(hintext: 'Enter your username',
+                  CustomTextform(bordr: BorderRadius.circular(10),
+                    hintext: 'Enter your username',
                     mycontroller: username,
                     validator: (val) {
                       if(val== ""){
@@ -86,7 +87,9 @@ class _SignUpState extends State<SignUp> {
                   ),
 
 
-                  CustomTextform(hintext: 'Enter your email',
+                  CustomTextform(
+                    bordr: BorderRadius.circular(10),
+                    hintext: 'Enter your email',
                     mycontroller: email,
                     validator: (val) {
                       if(val== ""){
@@ -103,7 +106,9 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
 
-                  CustomTextform(mycontroller: password,
+                  CustomTextform(
+                    bordr: BorderRadius.circular(10),
+                    mycontroller: password,
                     hintext: 'Enter your password',
                     validator: (val) {
                       if(val== ""){
@@ -181,7 +186,7 @@ class _SignUpState extends State<SignUp> {
                         text:"LogIn",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Colors.orange
+                            color: Color(0xFF212121)
                         )
                     ),
                   ])),

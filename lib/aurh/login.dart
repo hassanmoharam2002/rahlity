@@ -94,7 +94,7 @@ class _LogInState extends State<LogIn> {
                     ),
                   ),
                   CustomTextform(
-                    bordr: BorderRadius.circular(50),
+                    bordr: BorderRadius.circular(10),
                     prefix: Icons.email,
                     hintext: 'Enter your email',
                     mycontroller: email, validator: (val) {
@@ -105,15 +105,16 @@ class _LogInState extends State<LogIn> {
                     }, statepassword: false, suffixpressed: () {  },
 
                   ),
+                  Container(height: 30,),
                   const Text('password',
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold
                     ),
                   ),
-                  Container(height: 10,),
+
                   CustomTextform(
-                    bordr: BorderRadius.circular(50),
+                    bordr: BorderRadius.circular(10),
 
 
                     sufix: ispasswordshow ?Icons.visibility:Icons.visibility_off,
@@ -173,7 +174,7 @@ class _LogInState extends State<LogIn> {
                           top: 10,bottom: 20
                       ),
                       alignment: Alignment.topRight,
-                      child: const Text('forget password ?',
+                      child: const Text('forget password !',
 
                         style: TextStyle(fontSize: 14),
 
@@ -247,47 +248,56 @@ class _LogInState extends State<LogIn> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                MaterialButton(
-                  height: 60,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)
+                Container(
+                  width: 60,
+                  child: MaterialButton(
+                    height: 60,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)
+                    ),
+                    minWidth: 60,
+                    color: Colors.white,
+                    textColor: Colors.white,
+                    onPressed:(){
+                      signInWithGoogle();
+                    } ,
+                    child:Image.asset('assets/image/google.png'
+                      ,width: 50,height: 20,) ,
                   ),
-                  minWidth: 60,
-                  color: Colors.red[700],
-                  textColor: Colors.white,
-                  onPressed:(){
-                    signInWithGoogle();
-                  } ,
-                  child:Image.asset('assets/image/g.png'
-                    ,width: 20,height: 20,) ,
                 ),
-                MaterialButton(
-                  height: 60,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)
+                Container(
+                  width: 60,
+                  child: MaterialButton(
+                    height: 60,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)
+                    ),
+                    minWidth: 60,
+                    color: Colors.white,
+                    textColor: Colors.white,
+                    onPressed:(){
+                      signInWithGoogle();
+                    } ,
+                    child:Image.asset('assets/image/facebook.png'
+                      ,width: 50,height: 20,) ,
                   ),
-                  minWidth: 60,
-                  color: Colors.blue[700],
-                  textColor: Colors.white,
-                  onPressed:(){
-                    signInWithGoogle();
-                  } ,
-                  child:Image.asset('assets/image/g.png'
-                    ,width: 20,height: 20,) ,
                 ),
-                MaterialButton(
-                  height: 60,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)
+                Container(
+                  width: 60,
+                  child: MaterialButton(
+                    height: 60,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)
+                    ),
+                    minWidth: 60,
+                    color: Colors.white,
+                    textColor: Colors.white,
+                    onPressed:(){
+                      signInWithGoogle();
+                    } ,
+                    child:Image.asset('assets/image/apple.png',
+                      width: 50,height: 30,) ,
                   ),
-                  minWidth: 60,
-                  color: Colors.black,
-                  textColor: Colors.white,
-                  onPressed:(){
-                    signInWithGoogle();
-                  } ,
-                  child:Image.asset('assets/image/g.png'
-                    ,width: 20,height: 20,) ,
                 ),
 
 
@@ -310,7 +320,7 @@ class _LogInState extends State<LogIn> {
                         text:" register",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Colors.orange
+                            color: Color(0xFF212121)
                         )
                     ),
                   ])),

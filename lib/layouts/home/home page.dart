@@ -15,6 +15,9 @@ class homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        elevation: 1,
+      ),
       appBar:AppBar(
         elevation: 0,
         backgroundColor:Colors.transparent ,

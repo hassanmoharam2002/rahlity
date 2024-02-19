@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20)
       ),
-      color: Colors.orange,
+      color: Color(0xFF212121),
       textColor: Colors.white,
       onPressed:onpressed ,
       child:Text(title) ,);

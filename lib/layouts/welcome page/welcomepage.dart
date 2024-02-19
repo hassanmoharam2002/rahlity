@@ -56,7 +56,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         style: ElevatedButton.styleFrom(
                           elevation:0 ,
                           shape: StadiumBorder(),
-                          backgroundColor: Colors.orange,
+                          backgroundColor: Color(0xFF212121),
                           padding: EdgeInsets.symmetric(
                             vertical: 15,
                             horizontal: 8
