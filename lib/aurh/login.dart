@@ -125,7 +125,7 @@ class _LogInState extends State<LogIn> {
 
                     },
                     prefix: Icons.password,
-                    statepassword: ispasswordshow ?true:false,
+                    statepassword: ispasswordshow ? true: false,
                     mycontroller: password,
                     hintext: 'Enter your password',
                     validator: (val) {

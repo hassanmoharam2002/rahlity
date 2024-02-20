@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
+import '../drawer_ui/drawer_.dart';
 import '../widget/customiconbuttom.dart';
 import '../widget/locationcard.dart';
 import '../widget/nearvy_places.dart';
@@ -15,9 +16,7 @@ class homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        elevation: 1,
-      ),
+      drawer: CustemedDrawer(),
       appBar:AppBar(
         elevation: 0,
         backgroundColor:Colors.transparent ,

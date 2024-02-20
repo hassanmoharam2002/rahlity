@@ -19,9 +19,6 @@ class CustomTextform extends StatelessWidget {
        required this.suffixpressed, this.sufix,
       this.bordr
   });
-
-
-
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -30,7 +27,7 @@ class CustomTextform extends StatelessWidget {
       validator: validator,
       controller: mycontroller,
       decoration: InputDecoration(
-        suffixIcon:sufix != null
+        suffixIcon :sufix != null
             ? IconButton(onPressed: suffixpressed, icon: Icon(sufix))
             : sufix = null,
         prefixIcon: Icon(prefix),
