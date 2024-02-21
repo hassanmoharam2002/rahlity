@@ -30,11 +30,11 @@ class homepage extends StatelessWidget {
           ],
         ),
         actions: [
-          Customiconbutton(prees: () {  },
-            icon: Icon(Ionicons.search_outline),
-
-
-          ),
+          // Customiconbutton(prees: () {  },
+          //   icon: Icon(Ionicons.search_outline),
+          //
+          //
+          // ),
           Padding(
             padding: const EdgeInsets.only(left: 8,right: 12),
             child: Customiconbutton(prees: () {  },

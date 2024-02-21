@@ -43,6 +43,7 @@ dependencies:
   firebase_auth: ^4.15.2
   google_sign_in: ^6.1.6
   awesome_dialog: ^3.2.0
+  flutter_native_splash: ^2.3.10
 #  cloud_firestore: ^4.14.0
 #  firebase_core: ^2.24.2
 #  firebase_storage: ^11.6.0
@@ -61,6 +62,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.1
+flutter_native_splash:
+    android_gravity: center_vertical
+    color: "#FFFFFF"
+    image: assets/illustration.png
+    #android: false
+    #ios: false
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
