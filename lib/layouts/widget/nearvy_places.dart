@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:home/layouts/postscreen.dart';
 import 'package:home/layouts/widget/dictance.dart';
 
 
@@ -28,7 +29,10 @@ class NearbyPlaces extends StatelessWidget {
                 ),
                 child:InkWell(
                     borderRadius: BorderRadius.circular(12),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PostScreen()));
+
+                  },
                   child: Row(
                     children: [
                       ClipRRect(

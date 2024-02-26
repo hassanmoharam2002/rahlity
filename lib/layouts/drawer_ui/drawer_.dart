@@ -1,8 +1,10 @@
 
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class CustemedDrawer extends StatelessWidget {
   const CustemedDrawer({super.key});
@@ -10,6 +12,7 @@ class CustemedDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+
       elevation: 110,
       shadowColor: Colors.purple,
      surfaceTintColor: Colors.black,
@@ -128,15 +131,25 @@ class CustemedDrawer extends StatelessWidget {
           Expanded(
             child:Align(
               alignment:FractionalOffset.bottomLeft ,
-              child: ListTile(
-              leading: Icon(
-                Icons.logout, size: 30,
+              child: InkWell(
+                hoverColor: Colors.pink,
+                highlightColor: Colors.black,
+                onTap: ()async{
+                  GoogleSignIn googlesignin =GoogleSignIn();
+                  googlesignin.disconnect();
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.of(context).pushNamedAndRemoveUntil('login', (route) => false);
+                },
+                child: ListTile(
+                leading: Icon(
+                  Icons.logout, size: 30,
+                ),
+                title: Text('Laogout',style: TextStyle(
+                    fontSize: 20,
+                  color: Colors.blue
+                ),),
+                          ),
               ),
-              title: Text('Laogout',style: TextStyle(
-                  fontSize: 20,
-                color: Colors.blue
-              ),),
-                        ),
             ), )
         ],
       ),

@@ -8,11 +8,11 @@ class TouristPlacesModel{
 }
 
 List<TouristPlacesModel> touristPlaces =[
-  TouristPlacesModel(name: 'Mountain', image: 'assets/icons/mountain.png'),
-  TouristPlacesModel(name: 'Beach', image: 'assets/icons/beach.png'),
-  TouristPlacesModel(name: 'Forest', image: 'assets/icons/forest.png'),
-  TouristPlacesModel(name: 'City', image: 'assets/icons/city.png'),
-  TouristPlacesModel(name: 'Desert', image: 'assets/icons/desert.png'),
+  TouristPlacesModel(name: 'Stays', image: 'assets/icons/mountain.png'),
+  TouristPlacesModel(name: 'Taxi', image: 'assets/icons/beach.png'),
+  TouristPlacesModel(name: 'Car rental', image: 'assets/icons/forest.png'),
+  TouristPlacesModel(name: 'flying', image: 'assets/icons/city.png'),
+  TouristPlacesModel(name: 'Attraction', image: 'assets/icons/desert.png'),
 
 
 ];

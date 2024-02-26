@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
 import '../../models/recomendedplacesmodel.dart';
+import '../postscreen.dart';
 
 class RecomanfationPlaces extends StatelessWidget {
   const RecomanfationPlaces({super.key});
@@ -26,6 +27,7 @@ class RecomanfationPlaces extends StatelessWidget {
                 child:InkWell(
                   borderRadius: BorderRadius.circular(12),
                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PostScreen()));
                    
                  },
                   child: Padding(

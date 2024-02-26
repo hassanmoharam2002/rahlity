@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
+import '../../component/homebottombar.dart';
 import '../drawer_ui/drawer_.dart';
 import '../widget/customiconbuttom.dart';
 import '../widget/locationcard.dart';
@@ -94,33 +95,7 @@ class homepage extends StatelessWidget {
 
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: true,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        onTap: (index){},
-        items: const [
-          BottomNavigationBarItem(
-              icon:Icon(Ionicons.home_outline),
-            label: 'Home'
-
-          ),
-          BottomNavigationBarItem(
-              icon:Icon(Ionicons.bookmark_outline),
-            label: 'Boookmark'
-          ),
-          BottomNavigationBarItem(
-              icon:Icon(Ionicons.ticket_outline),
-              label: 'ticket'
-          ),
-          BottomNavigationBarItem(
-              icon:Icon(Ionicons.person_outline),
-              label: 'profile'
-          )
-
-        ],
-
-      ),
+      bottomNavigationBar: HomeBottomBar()
     );
   }
 }
