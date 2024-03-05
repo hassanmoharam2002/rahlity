@@ -1,8 +1,12 @@
 
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+import '../manage your account/manageacount.dart';
 
 class CustemedDrawer extends StatelessWidget {
   const CustemedDrawer({super.key});
@@ -66,13 +70,19 @@ class CustemedDrawer extends StatelessWidget {
 
             ],
           ),
-          ListTile(
-            leading: Icon(
-              Icons.person, size: 30,
+          InkWell(
+            highlightColor: Colors.black,
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AccountSetting()));
+            },
+            child: ListTile(
+              leading: Icon(
+                Icons.person, size: 30,
+              ),
+              title: Text('manage your acount',style: TextStyle(
+                  fontSize: 20
+              ),),
             ),
-            title: Text('manage your acount',style: TextStyle(
-                fontSize: 20
-            ),),
           ),
           Padding(
             padding: EdgeInsets.only(left: 20,
@@ -125,19 +135,30 @@ class CustemedDrawer extends StatelessWidget {
                 fontSize: 15
             ),),
           ),
-          Expanded(
-            child:Align(
-              alignment:FractionalOffset.bottomLeft ,
-              child: ListTile(
-                leading: Icon(
-                  Icons.logout, size: 30,
+
+          Spacer(),
+          InkWell(
+            highlightColor: Colors.black,
+            onTap: ()async{
+              GoogleSignIn googlesignin =GoogleSignIn();
+              googlesignin.disconnect();
+              await FirebaseAuth.instance.signOut();
+              Navigator.of(context).pushNamedAndRemoveUntil('login', (route) => false);
+            },
+            child: Expanded(
+              child:Align(
+                alignment:FractionalOffset.bottomLeft ,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.logout, size: 30,
+                  ),
+                  title: Text('Laogout',style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.blue
+                  ),),
                 ),
-                title: Text('Laogout',style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.blue
-                ),),
-              ),
-            ), )
+              ), ),
+          )
         ],
       ),
     );
