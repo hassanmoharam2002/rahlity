@@ -80,10 +80,10 @@ flutter:
 
   assets:
     - assets/image/
-    - assets/image/rental/cars
-    - assets/image/rental/dealers
-    - assets/image/rental/users
-    - assets/image/rental/screenshots
+#    - assets/image/rental/cars
+#    - assets/image/rental/dealers
+#    - assets/image/rental/users
+#    - assets/image/rental/screenshots
     - assets/
     - assets/icons/
     - assets/p/
