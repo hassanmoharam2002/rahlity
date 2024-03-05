@@ -20,7 +20,29 @@ class TouristPlaces extends StatelessWidget {
               highlightColor: Colors.blue,
               borderRadius: BorderRadius.circular(10),
               onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                switch(touristPlaces[index].numid){
+                  case 0:
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                    break;
+                  case 1:
+                  //  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                  return;
+                    break;
+                  case 2:
+                  //  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                    return;
+                    break;
+                  case 3:
+                  //  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                    return;
+                    break;
+                  case 4:
+                  //  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                    return;
+                    break;
+
+                }
+                // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
               },
               child: Chip(
                   label: Text(touristPlaces[index].name),
