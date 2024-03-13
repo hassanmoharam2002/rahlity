@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
+import '../chatbot/chatbot.dart';
 import '../manage your account/manageacount.dart';
 
 class CustemedDrawer extends StatelessWidget {
@@ -134,6 +135,9 @@ class CustemedDrawer extends StatelessWidget {
             title: Text('ContactCustmerServes',style: TextStyle(
                 fontSize: 15
             ),),
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ChatBot()));
+            },
           ),
 
           Spacer(),
