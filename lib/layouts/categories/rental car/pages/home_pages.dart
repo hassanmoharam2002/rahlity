@@ -4,7 +4,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:home/layouts/categories/rental%20car/colors.dart';
+import 'package:home/layouts/categories/rental%20car/pages/brand_card.dart';
+import 'package:home/layouts/categories/rental%20car/pages/scrallablleCars.dart';
+import 'package:home/layouts/categories/rental%20car/pages/scrollabarbrands.dart';
+import 'package:home/layouts/categories/rental%20car/pages/searchfield.dart';
 import 'package:home/layouts/categories/rental%20car/pages/top_app_bar.dart';
+
+import '../models/car.dart';
+import 'TextAndMoreRow.dart';
+import 'carcards.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,6 +20,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size= MediaQuery.of(context).size;
+
+
     return SafeArea(
       child: Scaffold(
         body:Column(
@@ -25,73 +35,51 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TopAppBar(),
-                    Text("SSearch your Dream\n Super Car to Drive",
+                    Text("Search your Dream\n Super Car to Drive",
                       style: Theme.of(context).textTheme.headlineSmall!
                           .copyWith(
                           color: backgroundColor,
                           fontWeight: FontWeight.bold),
 
                     ),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: SizedBox(
-                            height:size.width*0.12,
-                            child: TextField(
-                              cursorColor: grey,
-                              decoration: InputDecoration(
-                                prefix: Icon(
-                                  CupertinoIcons.search,
-                                  color:grey ,
-                                  size: 30,),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
-                                    width: 2,color: grey
-                                  )
-                                ), focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
-                                      width: 2,color: grey
-                                  ),
+                   SearchFieled(),
 
-                              ),
-                                labelText: "search your dream car",
-                                labelStyle: TextStyle(
-                                  color: grey,
-
-                                ),
-                                fillColor: Colors.white,
-                                filled: true,
-
-                              ),
-
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 16,
-                        ),
-                        Container(
-                          width: size.width*0.12,
-                          height: size.width*0.12,
-                          decoration: BoxDecoration(
-                            color: yellowColor,
-                            borderRadius: BorderRadius.circular(10)
-
-                          ),
-                          child: Image.asset("assets/image/rental/car/settings.png",
-                          color: Colors.black,
-                          ),
-
-                        )
-
-                      ],
-                    )
                   ],
                 ),
               ),
             ),
+            SizedBox(
+              height: 16,
+            ),
+            Expanded(
+                child: Container(
+                  width: size.width,
+                  decoration: BoxDecoration(
+                    color: backgroundColor,
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(30))
+                  ),
+                  padding: EdgeInsets.all(16),
+                  child:Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment:MainAxisAlignment.spaceEvenly ,
+                    children: [
+                      TextandMoraRow(text: "Top Brands",),
+                      ScralleBaleBrands(),
+                      TextandMoraRow(text: "Recomandations",),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      SctablleCars(),
+
+
+
+
+                      
+                    ],
+                  ) ,
+                ),
+
+            )
       
           ],
         ) ,

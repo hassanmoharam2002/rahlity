@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/tourist_places_model.dart';
 import '../categories/akama/akama.dart';
+import '../categories/rental car/pages/home_pages.dart';
 
 class TouristPlaces extends StatelessWidget {
   const TouristPlaces({super.key});
@@ -29,7 +30,9 @@ class TouristPlaces extends StatelessWidget {
                   return;
                     break;
                   case 2:
-                  //  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
+
+                    //  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
                     return;
                     break;
                   case 3:

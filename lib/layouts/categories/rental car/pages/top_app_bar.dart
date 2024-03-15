@@ -10,61 +10,45 @@ class TopAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size= MediaQuery.of(context).size;
-    return SafeArea(
-      child: Scaffold(
-        body:Column(
+    return Row(
+      children: [
+        Icon(Icons.location_on,
+          color:yellowColor,
+          size:30 ,),
+        SizedBox(
+          width: 8,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.location_on,
-                        color:yellowColor,
-                        size:30 ,),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('your location',
-                            style:Theme.of(context).
-                            textTheme.titleLarge!.
-                            copyWith(color: grey) ,
-                          ),
-                          Text('miramar, san Diago',
-                            style:Theme.of(context).
-                            textTheme.titleLarge!.
-                            copyWith(color: grey) ,
-                          ),
-
-                        ],
-                      ),
-                      Spacer(),
-                      Container(
-                        width: size.width * 0.12,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                              width: 2,color: grey
-                          ),
-                        ),
-                        child:Image.asset(
-                          'assets/image/rental/car/user.png',
-                          fit: BoxFit.cover,
-                        ) ,
-                      )
-                    ],
-                  )
-                ],
-              ),
+            Text('your location',
+              style:Theme.of(context).
+              textTheme.titleLarge!.
+              copyWith(color: grey) ,
+            ),
+            Text('miramar, san Diago',
+              style:Theme.of(context).
+              textTheme.titleLarge!.
+              copyWith(color: grey) ,
             ),
 
           ],
-        ) ,
-      ),
+        ),
+        Spacer(),
+        Container(
+          width: size.width * 0.12,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+                width: 2,color: grey
+            ),
+          ),
+          child:Image.asset(
+            'assets/image/rental/car/user.png',
+            fit: BoxFit.cover,
+          ) ,
+        )
+      ],
     );
   }
 }
