@@ -83,7 +83,7 @@ flutter:
 
   assets:
     - assets/image/
-    - assets/image/rental/car
+    - assets/image/rental/car/
 #    - assets/image/rental/dealers
 #    - assets/image/rental/users
 #    - assets/image/rental/screenshots
