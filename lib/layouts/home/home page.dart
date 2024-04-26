@@ -12,6 +12,7 @@ import '../widget/recomandition.dart';
 import '../widget/touristplaces.dart';
 
 class homepage extends StatelessWidget {
+
   const homepage({super.key});
 
   @override

@@ -22,10 +22,10 @@ class PostScreen extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor:Colors.transparent ,
-        appBar:PreferredSize(
-          preferredSize: Size.fromHeight(90),
-          child: PostAppBar(),
-        ),
+          appBar:PreferredSize(
+            preferredSize: Size.fromHeight(90),
+            child: PostAppBar(),
+          ),
   bottomNavigationBar: PostBottomBar(),
       ),
     );

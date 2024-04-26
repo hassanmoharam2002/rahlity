@@ -29,7 +29,6 @@ class PostAppBar extends StatelessWidget {
                    blurRadius: 6,
                    color: Colors.white
                  )
-
                ]
 
              ),

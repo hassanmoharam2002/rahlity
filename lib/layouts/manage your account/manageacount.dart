@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../component/personal informa/personalinformation.dart';
+
 class AccountSetting extends StatelessWidget {
   const AccountSetting({super.key});
   static const String rountName = 'Slider_Screen' ;
@@ -10,7 +12,7 @@ class AccountSetting extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 10,
-          leading: Icon(Icons.arrow_back_ios, color: Colors.black, ),
+          leading: IconButton( onPressed: ()=>Navigator.of(context).pop(), icon: Icon(Icons.arrow_back_ios), ),
           title: const Text('Account Settings',
             style: TextStyle(
               fontSize: 25 ,
@@ -24,6 +26,7 @@ class AccountSetting extends StatelessWidget {
         body: ListView(
           children: <Widget>[
             ListTile(
+
               leading:  Icon(Icons.person),
               title:  Text('Personal Information',
                 style: TextStyle(
@@ -38,6 +41,7 @@ class AccountSetting extends StatelessWidget {
                 ),
               ),
               onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PersonalInformation()));
               },
             ),
             ListTile(

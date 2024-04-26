@@ -1,5 +1,6 @@
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +10,31 @@ import 'package:google_sign_in/google_sign_in.dart';
 import '../chatbot/chatbot.dart';
 import '../manage your account/manageacount.dart';
 
-class CustemedDrawer extends StatelessWidget {
+class CustemedDrawer extends StatefulWidget {
+
   const CustemedDrawer({super.key});
 
   @override
+  State<CustemedDrawer> createState() => _CustemedDrawerState();
+}
+
+class _CustemedDrawerState extends State<CustemedDrawer> {
+  CollectionReference user = FirebaseFirestore.instance.collection('user');
+  String _data = '';
+  void _getData() async {
+    QuerySnapshot querySnapshot = await user.where('id',isEqualTo:FirebaseAuth.instance.currentUser!.uid ).get();
+    setState(() {
+      querySnapshot.docs.forEach((doc) {
+        _data += "_${doc['name']}\n";
+      });
+    });
+  }
+  @override
+  void initState() {
+    _getData();
+    // TODO: implement initState
+    super.initState();
+  }
   Widget build(BuildContext context) {
     return Drawer(
       elevation: 110,
@@ -56,7 +78,7 @@ class CustemedDrawer extends StatelessWidget {
                       width: 5,
                     ),
                     Text(
-                      'hassan moharam',
+                      '${_data}',
                       style: TextStyle(
                           color: Colors.white,
                           backgroundColor: Colors.black.withOpacity(.4),
