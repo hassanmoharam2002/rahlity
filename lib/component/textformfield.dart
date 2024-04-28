@@ -11,13 +11,15 @@ class CustomTextform extends StatelessWidget {
   final TextEditingController mycontroller;
   final String? Function(String?)? validator;
    final IconData? prefix;
+   final Color? coloro;
+  final Color? coloreo;
 
     CustomTextform({super.key,
     required this.hintext,
     required this.mycontroller,
     required this.validator, required this.statepassword, required this.prefix,
        required this.suffixpressed, this.sufix,
-      this.bordr
+      this.bordr, this.coloro, this.coloreo
   });
   @override
   Widget build(BuildContext context) {
@@ -42,11 +44,15 @@ class CustomTextform extends StatelessWidget {
         fillColor: Colors.grey[200],
         border: OutlineInputBorder(
             borderRadius: bordr!,
-            borderSide: BorderSide(color: Colors.grey)
+            borderSide: BorderSide(
+                width: 1.7,
+                color: coloro!)
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: bordr!,
-            borderSide: BorderSide(color: Colors.grey)
+            borderSide: BorderSide(
+                width: 1.7,
+                color: coloreo!)
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: bordr!,

@@ -104,6 +104,8 @@ class _LogInState extends State<LogIn> {
                       return null;
                     }, statepassword: false, suffixpressed: () {  },
 
+                    coloreo: Colors.grey,
+                    coloro: Colors.grey,
                   ),
                   Container(height: 30,),
                   const Text('password',
@@ -134,6 +136,8 @@ class _LogInState extends State<LogIn> {
                       }
                       return null;
                     },
+                    coloreo: Colors.grey,
+                    coloro: Colors.grey,
 
                   ),
                   InkWell(

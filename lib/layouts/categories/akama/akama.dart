@@ -56,10 +56,12 @@ class _AkamaState extends State<Akama> {
                   statepassword: false,
                   prefix: Icons.location_on_outlined,
                   suffixpressed: () {  },
+                    coloro: Colors.blue,
+                    coloreo: Colors.blue,
 
                 ),
 
-                SizedBox(height: 10,),
+
                 Container(
                   height: 40,
                   width: double.infinity,
@@ -134,9 +136,32 @@ class _AkamaState extends State<Akama> {
                   )
 
                 ),
+
               ],
 
             ),
+          ),
+
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    enableFeedback: true,
+                    elevation:0 ,
+                    shape: RoundedRectangleBorder(),
+                    backgroundColor: Colors.blue,
+                    padding: EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 8
+                    )
+
+                ),
+                onPressed: (){}, child: Text('Search',style: TextStyle(
+                color: Colors.white
+            ),)),
+          ),
+          SizedBox(
+            height: 20,
           ),
           akama_w(),
 

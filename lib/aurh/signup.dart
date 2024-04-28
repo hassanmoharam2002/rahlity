@@ -73,6 +73,8 @@ class _SignUpState extends State<SignUp> {
                     statepassword: false,
                     prefix: Icons.incomplete_circle,
                     suffixpressed: () {  },
+                    coloro: Colors.grey,
+                    coloreo: Colors.grey,
 
                   ),
                   SizedBox(
@@ -96,6 +98,8 @@ class _SignUpState extends State<SignUp> {
                         return 'cant to be empty';
                       }
                     }, statepassword: false, prefix: Icons.email_sharp, suffixpressed: () {  },
+                      coloro: Colors.grey,
+                      coloreo: Colors.grey,
 
                   ),
                   Container(height: 10,),
@@ -116,6 +120,8 @@ class _SignUpState extends State<SignUp> {
                       }
                     }, prefix: Icons.pin, statepassword: false, suffixpressed: () {  },
 
+                      coloro: Colors.grey,
+                      coloreo: Colors.grey,
                   ),
 
 

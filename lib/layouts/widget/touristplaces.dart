@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:home/layouts/attraction/atract.dart';
 
 import '../../models/tourist_places_model.dart';
 import '../categories/akama/akama.dart';
@@ -40,7 +41,7 @@ class TouristPlaces extends StatelessWidget {
                     return;
                     break;
                   case 4:
-                  //  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Akama()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Attraction()));
                     return;
                     break;
 
