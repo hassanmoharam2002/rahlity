@@ -51,6 +51,8 @@ dependencies:
 #  intl: ^0.18.1
   dash_chat_2: ^0.0.20
   http: ^1.2.0
+  conditional_builder_null_safety: ^0.0.6
+  fluentui_icons: ^1.0.0
 #  cloud_firestore: ^4.14.0
 #  firebase_core: ^2.24.2
 #  firebase_storage: ^11.6.0
