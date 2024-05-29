@@ -60,6 +60,8 @@ class _nationState extends State<nation> {
           height: 25,
         ),
         CustomTextform(
+          coloreo: Colors.grey,
+          coloro: Colors.grey,
           bordr:BorderRadius.circular(10) ,
           hintext: 'nationality',
           mycontroller: nation,

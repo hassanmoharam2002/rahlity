@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTextform extends StatelessWidget {
+
   BorderRadius?  bordr;
    VoidCallback suffixpressed;
    IconData? sufix;
@@ -15,15 +16,18 @@ class CustomTextform extends StatelessWidget {
   final Color? coloreo;
 
     CustomTextform({super.key,
+
     required this.hintext,
     required this.mycontroller,
     required this.validator, required this.statepassword, required this.prefix,
        required this.suffixpressed, this.sufix,
-      this.bordr, this.coloro, this.coloreo
+      this.bordr, this.coloro, this.coloreo,
+
   });
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+
 
       obscureText: statepassword,
       validator: validator,

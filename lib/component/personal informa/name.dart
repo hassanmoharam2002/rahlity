@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../../layouts/drawer_ui/drawer_.dart';
 import '../textformfield.dart';
 
 class ShowBottomSheetmm extends StatefulWidget {
@@ -70,20 +69,25 @@ class _ShowBottomSheetmmState extends State<ShowBottomSheetmm> {
             height: 25,
           ),
           CustomTextform(
+            coloreo: Colors.grey,
+            coloro: Colors.grey,
+            sufix: null,
             bordr:BorderRadius.circular(10) ,
             hintext: 'put your name or change it',
             mycontroller: controllername,
             validator:  (val)
             {
-              if(val == ""){
+              if(val== ""){
                 return 'cant to be embty ';
               }
+              return null;
             },
             statepassword: false,
             prefix: Icons.wrap_text,
             suffixpressed: () {  },
 
-          ),  SizedBox(
+          ),
+          SizedBox(
             height: 20,
           ),
 
@@ -94,7 +98,6 @@ class _ShowBottomSheetmmState extends State<ShowBottomSheetmm> {
             ),),
           ),
           Spacer(),
-
 
           SizedBox(
             width: double.infinity,
@@ -120,9 +123,10 @@ class _ShowBottomSheetmmState extends State<ShowBottomSheetmm> {
                 color: Colors.white
             ),)),
           ),
-          SizedBox(
-            height: 20,
-          )
+          SizedBox(height: 20,)
+          // SizedBox(
+          //   height: 20,
+          // )
         ],
       ),
     );

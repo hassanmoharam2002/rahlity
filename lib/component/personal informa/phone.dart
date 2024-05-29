@@ -36,6 +36,7 @@ class _phoneState extends State<phone> {
   void initState() {
     _getData();
     // TODO: implement initState
+    phone.text=_phone;
     super.initState();
   }
   Widget build(BuildContext context) {
@@ -57,6 +58,8 @@ class _phoneState extends State<phone> {
           height: 25,
         ),
         CustomTextform(
+          coloreo: Colors.grey,
+          coloro: Colors.grey,
           bordr:BorderRadius.circular(10) ,
           hintext: 'phone',
           mycontroller: phone,
@@ -65,6 +68,12 @@ class _phoneState extends State<phone> {
           prefix: Icons.phone,
           suffixpressed: () {  },
 
+        ),
+        Center(
+          child: Text(_phone,style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 25
+          ),),
         ),
         Spacer(),
         SizedBox(
