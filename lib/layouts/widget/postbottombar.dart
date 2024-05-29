@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../../models/nearbymodel.dart';
+import '../payment/Features/checkout/presentation/views/my_cart_view.dart';
 
 class PostBottomBar extends StatelessWidget {
   const PostBottomBar({super.key});
@@ -156,13 +157,18 @@ class PostBottomBar extends StatelessWidget {
                               )
                             ]
                           ),
-                          child: Text(
-                            'Book now',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 26,
-                              color: Colors.white
+                          child: InkWell(
+                            onTap: (){
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyCartView()));
+                            },
+                            child: Text(
+                              'Book now',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 26,
+                                color: Colors.white
 
+                              ),
                             ),
                           ),
                         )
